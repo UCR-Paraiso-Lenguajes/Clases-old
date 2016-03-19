@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+console.log(typeof "John" ); // Returns string 
+console.log(typeof 3.14               );   // Returns number
+console.log(typeof false              );   // Returns boolean
+console.log(typeof [1,2,3,4]          );   // Returns object
+console.log(typeof {name:'John', age:34}); // Returns object
+</script>
+</head>
+
+<body>
+Null<br>
+In JavaScript null is "nothing". It is supposed to be something that doesn't exist.<br>
+<br>
+Unfortunately, in JavaScript, the data type of null is an object.<br>
+<br>
+Note	You can consider it a bug in JavaScript that typeof null is an object. It should be null.<br>
+You can empty an object by setting it to null:<br>
+<br>
+Example<br>
+var person = null;           // Value is null, but type is still an object<br>
+
+You can also empty an object by setting it to undefined:<br>
+<br>
+Example<br>
+var person = undefined;     // Value is undefined, type is undefined<br>
+
+Difference Between Undefined and Null<br>
+typeof undefined             // undefined<br>
+typeof null                  // object<br>
+null === undefined           // false<br>
+null == undefined            // true<br>
+</body>
+</html>
