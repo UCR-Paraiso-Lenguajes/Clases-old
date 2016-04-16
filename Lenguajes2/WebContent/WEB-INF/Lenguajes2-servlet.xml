@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+	<context:component-scan base-package="com.ucr.lenguajes.controller" />
+ 
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+ <!-- 
+ <bean id="cristian" class="com.ucr.objectos.Persona">
+		<property name="nombre" value="Cristian" />
+		<property name="cedula" value="304310363" />
+		<property name="persona" ref="alvaro" />
+	
+	</bean>
+ 
+ 
+ 	<bean id="alvaro" class="com.ucr.objectos.Persona">
+		<property name="nombre" value="Alvaro" />
+		<property name="cedula" value="304320363" />
+	</bean>
+ 
+ 	<bean id="Cristian2" class="com.ucr.objectos.PersonaConDireccion">
+		<property name="direccion" value="SanRafael de Oreamuno" />
+	</bean>
+	 -->
+</beans>
