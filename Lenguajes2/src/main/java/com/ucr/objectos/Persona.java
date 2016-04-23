@@ -1,5 +1,7 @@
 package com.ucr.objectos;
 
+import com.ucr.excp.LenguajesExp;
+
 public class Persona 
 {
 	private Persona persona;
@@ -13,11 +15,11 @@ public class Persona
 	{
 		if( edad < 18 )
 		{
-			throw new RuntimeException("La persona debe ser mayor a 18 años.");
+			throw new LenguajesExp("La persona debe ser mayor a 18 años.");
 		}
 		else if( ! ciudad.equalsIgnoreCase("Costa Rica") )
 		{
-			throw new RuntimeException("La persona debe vivir en Costa Rica.");
+			throw new LenguajesExp("La persona debe vivir en Costa Rica.");
 		}
 		
 		this.edad = edad;
