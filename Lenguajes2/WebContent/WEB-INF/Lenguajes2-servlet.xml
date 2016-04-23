@@ -17,6 +17,22 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	
+	<!--  Conexion con DB -->
+	<bean id="personaDao" class="com.ucr.lenguajes.dao.PersonaDao">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}"/>
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+	</bean>
+
+	<context:property-placeholder location="WEB-INF/classes/jdbc.properties"/>
+	
  <!-- 
  <bean id="cristian" class="com.ucr.objectos.Persona">
 		<property name="nombre" value="Cristian" />
