@@ -5,16 +5,20 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class myController 
 {
-
+	private final static Logger logger = Logger.getLogger(myController.class);
+	
 	@RequestMapping(value="/welcome", method = RequestMethod.GET)
 	public String helloWorld1() 
 	{
+		logger.debug(" Controler de welcome");
+		
 		return "hola";
 	}
 	

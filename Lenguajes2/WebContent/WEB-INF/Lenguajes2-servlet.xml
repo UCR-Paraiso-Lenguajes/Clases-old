@@ -20,7 +20,7 @@
 	
 	
 	<!--  Conexion con DB -->
-	<bean id="personaDao" class="com.ucr.lenguajes.dao.PersonaDao">
+	<bean id="personaDao" class="com.ucr.lenguajes.dao.mysql.PersonaDao">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 

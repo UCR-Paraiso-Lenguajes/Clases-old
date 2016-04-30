@@ -61,5 +61,15 @@ public class Persona
 		//todo logica
 		return 0;
 	}
+
+	@Override
+	public String toString() {
+		return "Persona [persona=" + persona + ", id=" + id + ", nombre=" + nombre + ", cedula=" + cedula + ", edad="
+				+ edad + ", ciudad=" + ciudad + ", getId()=" + getId() + ", getNombre()=" + getNombre()
+				+ ", getCedula()=" + getCedula() + ", getPersona()=" + getPersona() + ", comprar()=" + comprar()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+	
 	
 }

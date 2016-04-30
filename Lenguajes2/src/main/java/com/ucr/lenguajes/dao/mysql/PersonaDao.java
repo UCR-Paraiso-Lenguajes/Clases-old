@@ -1,13 +1,15 @@
-package com.ucr.lenguajes.dao;
+package com.ucr.lenguajes.dao.mysql;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.sql.DataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+
+import com.ucr.lenguajes.dao.PersonaBD;
 import com.ucr.objectos.Persona;
 
-public class PersonaDao 
+public class PersonaDao implements PersonaBD
 {
 	private JdbcTemplate jdbcTemplate;
 	
