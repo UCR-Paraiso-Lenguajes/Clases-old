@@ -2,7 +2,9 @@ package com.ucr.lenguajes.dao.mysql;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import javax.sql.DataSource;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -33,6 +35,17 @@ public class PersonaDao implements PersonaBD
 	
 	public void setDataSource(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+
+	@Override
+	public void insertar(Persona persona) {
+		String sql = "INSERT INTO lenguajes.persona(cedula,nombre,edad,ciudad) VALUES(?,?,?,?,?)";
+					 
+					
+			jdbcTemplate.update(sql, new Object[] { persona.getCedula(),
+					persona.getNombre(), persona.getEdad(), persona.getCiudad() 
+			});
+		
 	}
 	
 	

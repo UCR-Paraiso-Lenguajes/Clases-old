@@ -8,6 +8,7 @@ public interface PersonaBD
 {
 
 	public Persona buscar(String id);
+	public void insertar(Persona persona);
 	
 	public void setDataSource(DataSource dataSource);
 }

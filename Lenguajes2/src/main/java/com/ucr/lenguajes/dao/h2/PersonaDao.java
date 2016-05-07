@@ -13,13 +13,17 @@ public class PersonaDao implements PersonaBD
 	
 	public Persona buscar(String id)
 	{
-		//TODO cambiar codigo por consulta en h2
 		return null;
 	}
 	
 	public void setDataSource(DataSource dataSource) 
 	{
-		//TODO cambiar codigo por conexcion con h2
+	}
+
+	@Override
+	public void insertar(Persona persona) 
+	{
+		return ;
 	}
 	
 	

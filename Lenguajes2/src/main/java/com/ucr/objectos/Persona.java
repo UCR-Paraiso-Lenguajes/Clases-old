@@ -61,6 +61,22 @@ public class Persona
 		//todo logica
 		return 0;
 	}
+	
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public String getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
 
 	@Override
 	public String toString() {
